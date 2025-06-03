@@ -6,7 +6,7 @@ Welcome to my personal portfolio! This project showcases my skills, projects, an
 
 ## 🚀 Live Demo
 Check out the live version of my portfolio:
-[Portfolio Link](https://port98.netlify.app/)
+[Portfolio Link](https://codebyabhi.netlify.app/)
 
 ## 🛠️ Tech Stack
 - **Frontend:** React.js, HTML, CSS, JavaScript, SCSS
