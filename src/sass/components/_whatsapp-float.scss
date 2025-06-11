@@ -1,0 +1,39 @@
+/* Floating WhatsApp Icon */
+.whatsapp-float {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 60px;
+  right: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 36px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.2);
+  box-shadow: 2px 2px 15px rgba(37, 211, 102, 0.8);
+}
+
+/* Responsive adjustments for WhatsApp float icon */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 70px; /* increased bottom to avoid overlap with dark mode toggle */
+    right: 5vw;
+    font-size: 28px;
+  }
+}
+.whatsapp-float {
+  bottom: calc(20px + 60px); /* 20px for darkmode + 60px spacing */
+}
+
