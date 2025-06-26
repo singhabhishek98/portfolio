@@ -67,13 +67,6 @@ Port/
 ## 📢 Contributing
 Feel free to contribute! Fork the repo, create a new branch, make changes, and submit a pull request.
 
----
-
 <div align="right">
     <h3>Made with ❤️ by **Abhishek Singh** 🚀</h3>
 </div>
-
----
-
-<div align="right"> style=Made with ❤️ by **Abhishek Singh**<h3> 🚀<div/>
-
