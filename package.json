@@ -3,12 +3,13 @@
   "version": "2.0.0",
   "description": "customizable portfolio template for developers",
   "main": "index.js",
+  
   "scripts": {
-    "dev": "vite src",
-    "build": "vite build",
-    "serve": "vite preview",
-    "compile:sass": "sass src/sass:src/css"
-  },
+  "dev": "vite",
+  "build": "vite build --emptyOutDir",
+  "serve": "vite preview",
+  "compile:sass": "sass src/sass:src/css"
+},
   "keywords": [],
   "author": "Abhishek Singh <abhisingh10298@gmail.com>",
   "license": "MIT",
