@@ -1,0 +1,45 @@
+#theme {
+  background-color: transparent;
+  border: none;
+  color: var(--bs-secondary);
+  font-size: 1.2rem;
+  position: fixed;
+  bottom: 3vh;
+  right: 3vh;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  i {
+    filter: none;
+    transition: filter 0.3s ease;
+  }
+
+  .bi-brightness-high-fill {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--bs-accent);
+    outline: none;
+    /* Remove scale transform to avoid size increase */
+    /* transform: none; */
+    box-shadow: none;
+    border-radius: 0;
+    background-color: transparent;
+  }
+}
+
+/* Transition for theme change */
+.theme-transition {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Responsive adjustments for dark mode button */
+@media (max-width: 768px) {
+  #theme {
+    font-size: 1.2rem;
+    bottom: 5vh;
+    right: 5vw;
+  }
+}

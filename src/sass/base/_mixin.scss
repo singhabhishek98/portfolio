@@ -1,0 +1,88 @@
+// === Typography ===
+// for body
+@mixin font-primary {
+  font-family: 'Raleway', sans-serif;
+}
+// for heading
+@mixin font-secondary {
+  font-family: 'Finger Paint', cursive;
+}
+
+// === Transition ===
+@mixin transition {
+  transition: 0.4s all ease-in-out;
+}
+
+// inline margin
+@mixin mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// heading
+@mixin h1 {
+  @include font-secondary;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+/* Music Toggle Styles */
+.music-toggle {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid var(--accent-color, #2c3e50);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.music-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  transition: opacity 0.3s ease;
+  position: absolute;
+}
+
+#pause-icon {
+  opacity: 0;
+  display: none;
+}
+
+/* Pulse animation when playing */
+.playing {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+// === media queries ===
+// breakpoints variables
+$bp-sm: map-get($grid-breakpoints, sm);
+$bp-md: map-get($grid-breakpoints, md);
+$bp-lg: map-get($grid-breakpoints, lg);
+$bp-xl: map-get($grid-breakpoints, xl);
+$bp-xxl: map-get($grid-breakpoints, xxl);
+
+@mixin media($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}

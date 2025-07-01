@@ -1,0 +1,62 @@
+header #header {
+  background: var(--bs-primary);
+  box-shadow: 0 3px 6px rgba(var(--bs-secondary-rgb), 0.2);
+  color: var(--bs-secondary);
+  font-family: 'Raleway', sans-serif;
+
+  .navbar-brand {
+    display: block;
+    width: 40%;
+    padding: 0;
+    color: var(--bs-secondary);
+    @include media($bp-md) {
+      width: 30%;
+    }
+    @include media($bp-lg) {
+      width: 25%;
+    }
+    @include media($bp-xl) {
+      width: 20%;
+    }
+  }
+
+  .nav-link {
+    position: relative;
+    width: fit-content;
+    color: var(--bs-secondary);
+
+    &::before {
+      content: '';
+      height: 2px;
+      width: 0;
+      background-color: var(--bs-accent);
+      @include transition;
+      border-radius: 50px;
+
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:hover::before {
+      width: 70%;
+    }
+
+    &.active {
+      color: var(--bs-accent);
+    }
+  }
+
+  /* Accessibility: focus styles for nav links */
+  .nav-link:focus-visible {
+    outline: 2px solid var(--bs-accent);
+    outline-offset: 2px;
+  }
+}
+
+/* Ensure navbar toggler button is fully visible on small screens */
+.navbar-toggler {
+  z-index: 1051; /* higher than Bootstrap modal backdrop */
+  position: relative;
+}
