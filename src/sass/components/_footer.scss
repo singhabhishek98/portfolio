@@ -1,0 +1,251 @@
+/* Styles for the footer */
+#footer {
+  background: linear-gradient(180deg, var(--bs-secondary), #1a1a1a);
+  padding: 1rem 0 2.5rem 0; /* Reduced padding to make footer smaller */
+  border-top: 3px solid var(--bs-accent);
+  color: var(--bs-primary);
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem; /* Reduced gap */
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 180px;
+  text-align: center;
+}
+
+.footer-section.copyright p {
+  margin: 0;
+  font-size: 0.9rem; /* Slightly reduced font size */
+}
+
+.footer-section.copyright a {
+  color: var(--bs-primary);
+  text-decoration: none;
+  font-family: var(--font-secondary, sans-serif);
+}
+
+.footer-section.copyright a:hover {
+  text-decoration: underline;
+  color: var(--bs-accent);
+}
+
+/* Quick links with hover underline animation */
+.footer-section.quick-links a {
+  position: relative;
+  color: var(--bs-primary);
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-size: 0.9rem; /* Slightly reduced font size */
+  font-family: var(--font-secondary, sans-serif);
+  transition: color 0.3s ease;
+}
+
+.footer-section.quick-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--bs-accent);
+  transition: width 0.3s ease;
+}
+
+.footer-section.quick-links a:hover {
+  color: var(--bs-accent);
+}
+
+.footer-section.quick-links a:hover::after {
+  width: 100%;
+}
+
+/* Social media icons */
+.footer-section.social-links a {
+  color: var(--bs-primary);
+  text-decoration: none;
+  margin: 0 0.25rem;
+  font-size: 1.4rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.footer-section.social-links a:hover {
+  /* Remove generic hover color to allow individual icon colors */
+  /* color: var(--bs-accent); */
+  transform: scale(1.15);
+}
+
+/* Individual social media icon hover colors */
+.footer-section.social-links a[title="Facebook"]:hover {
+  color: #1877F2; /* Facebook blue */
+}
+
+.footer-section.social-links a[title="Instagram"]:hover {
+  color: #E4405F; /* Instagram pink */
+}
+
+.footer-section.social-links a[title="GitHub"]:hover {
+  color: #181717; /* GitHub black */
+}
+
+.footer-section.social-links a[title="LinkedIn"]:hover {
+  color: #0077B5; /* LinkedIn blue */
+}
+
+.footer-section.social-links a[title="YouTube"]:hover {
+  color: #FF0000; /* YouTube red */
+}
+
+.footer-section.social-links a[title="Twitter"]:hover {
+  color: #000000; /* X black */
+}
+
+/* Add styles for X icon to match provided image */
+.footer-section.social-links a {
+  background-color: #6c757d; /* gray background */
+  color: white !important; /* white icon */
+  width: 35px;
+  height: 35px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+  margin: 0 0.2rem;
+}
+
+.footer-section.social-links a:hover {
+  background-color: #5a6268; /* slightly darker gray on hover */
+  color: white !important;
+  transform: scale(1.15);
+}
+
+/* Re-enable individual icon hover background colors and keep icon color white */
+.footer-section.social-links a[title="Facebook"]:hover {
+  background-color: #1877F2; /* Facebook blue */
+  color: white !important;
+  transform: scale(1.15);
+}
+
+.footer-section.social-links a[title="Instagram"]:hover {
+  background: linear-gradient( #833AB4, #C13584, #FD1D1D, #FCAF45);/* Instaglow */
+  color: white !important;
+  transform: scale(1.15);
+}
+
+.footer-section.social-links a[title="GitHub"]:hover {
+  background-color: #181717; /* GitHub black */
+  color: white !important;
+  transform: scale(1.15);
+}
+
+.footer-section.social-links a[title="LinkedIn"]:hover {
+  background-color: #0077B5; /* LinkedIn blue */
+  color: white !important;
+  transform: scale(1.15);
+}
+
+.footer-section.social-links a[title="YouTube"]:hover {
+  background-color: #FF0000; /* YouTube red */
+  color: white !important;
+  transform: scale(1.15);
+}
+
+.footer-section.social-links a[title="X"]:hover {
+  background-color: #000000; /* X black */
+  color: white !important;
+  transform: scale(1.15);
+}
+
+.footer-bottom {
+  margin-top: 0.5rem; /* Reduced margin to make footer smaller */
+  text-align: center;
+  font-size: 0.85rem;
+  color: #cccccc;
+}
+
+/* Accessibility: focus styles for footer links */
+.footer-section.quick-links a:focus-visible,
+.footer-section.social-links a:focus-visible,
+.footer-section.copyright a:focus-visible {
+  outline: 2px solid var(--bs-accent);
+  outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .footer-section.social-links a {
+    width: 24px;
+    height: 24px;
+    font-size: 0.8rem;
+    margin: 0.3rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .footer-section.social-links a {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
+    margin: 0.35rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .footer-section.social-links a {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    margin: 0 0.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  /* .footer-section.social-links a {
+    margin: 0.4rem;
+  } */
+  /* Ensure no clipping of icons on mobile */
+  .footer-section.social-links {
+    overflow: visible;
+  }
+
+  /* Adjust bottom padding to clear fixed dark mode button but smaller for responsiveness */
+  #footer {
+    padding-bottom: 2.5rem; /* Reduced from 6rem to 2.5rem for better responsiveness */
+  }
+
+  /* New styles to break copyright text on small screens */
+  .footer-bottom .rights {
+    display: block;
+    margin-top: 0.2rem;
+  }
+}
+/* End of footer styles */
+
+@media (max-width: 768px) {
+  #contact {
+    padding-bottom: 3rem;
+  }
+}

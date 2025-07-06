@@ -1,0 +1,76 @@
+# robots.txt for TechByAbhi Portfolio
+# Optimized for search engines and social media crawlers
+
+User-agent: *
+Allow: /
+
+# Allow all search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Allow social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+# Disallow unnecessary files
+Disallow: /node_modules/
+Disallow: /src/sass/
+Disallow: /*.scss
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /.git/
+Disallow: /.vscode/
+Disallow: /dist/
+Disallow: /build/
+
+# Allow CSS and JS for proper rendering
+Allow: /css/
+Allow: /js/
+Allow: /img/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.webp
+
+# Crawl delay (be respectful to servers)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://codebyabhi.netlify.app/sitemap.xml
+Sitemap: https://codebyabhi.netlify.app/sitemap-index.xml
+
+# Additional information
+# Website: https://codebyabhi.netlify.app
+# Contact: abhisingh10298@gmail.com
+# Last updated: 2025-01-06

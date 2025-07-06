@@ -1,0 +1,102 @@
+light: {
+    primary: '#ffffff',
+    secondary: '#444f5a',
+    accent: '#0564bd',
+    primaryRGB: '255, 255, 255',
+    secondaryRGB: '68, 79, 90'
+  },
+
+  dark: {
+    primary: '#22222b',
+    secondary: '#a2a1a6',
+    accent: '#0564bd',
+    primaryRGB: '34, 34, 43',
+    secondaryRGB: '162,161,166'
+  }
+};
+=======
+
+const themes = {
+  light: {
+    primary: '#ffffff',
+    secondary: '#444f5a',
+    accent: '#0564bd',
+    primaryRGB: '255, 255, 255',
+    secondaryRGB: '68, 79, 90',
+    socialIconBg: '#6c757d', // gray background for icons in light mode
+    socialIconColor: 'white', // white icon color in light mode
+    socialIconHoverBgFacebook: '#1877F2',
+    socialIconHoverBgInstagram: 'linear-gradient( #833AB4, #C13584, #FD1D1D, #FCAF45)',
+    socialIconHoverBgGitHub: '#181717',
+    socialIconHoverBgLinkedIn: '#0077B5',
+    socialIconHoverBgYouTube: '#FF0000',
+    socialIconHoverBgX: '#000000'
+  },
+
+  dark: {
+    primary: '#22222b',
+    secondary: '#a2a1a6',
+    accent: '#0564bd',
+    primaryRGB: '34, 34, 43',
+    secondaryRGB: '162,161,166',
+    socialIconBg: '#444f5a', // darker gray background for icons in dark mode
+    socialIconColor: '#e0e0e0', // lighter icon color in dark mode
+    socialIconHoverBgFacebook: '#145dbf',
+    socialIconHoverBgInstagram: 'linear-gradient( #6a2a8c, #a5276a, #c21818, #b3742a)',
+    socialIconHoverBgGitHub: '#0f0f0f',
+    socialIconHoverBgLinkedIn: '#005a8c',
+    socialIconHoverBgYouTube: '#cc0000',
+    socialIconHoverBgX: '#111111'
+  }
+};
+>>>>>>> REPLACE
+
+<<<<<<< SEARCH
+function applyTheme(obj) {
+  document.documentElement.style.setProperty('--bs-primary', obj.primary);
+  document.documentElement.style.setProperty('--bs-secondary', obj.secondary);
+  document.documentElement.style.setProperty('--bs-accent', obj.accent);
+  document.documentElement.style.setProperty(
+    '--bs-primary-rgb',
+    obj.primaryRGB
+  );
+  document.documentElement.style.setProperty(
+    '--bs-secondary-rgb',
+    obj.secondaryRGB
+  );
+  // Add transition class for smooth theme change
+  document.documentElement.classList.add('theme-transition');
+  window.setTimeout(function() {
+    document.documentElement.classList.remove('theme-transition');
+  }, 500);
+}
+=======
+
+function applyTheme(obj) {
+  document.documentElement.style.setProperty('--bs-primary', obj.primary);
+  document.documentElement.style.setProperty('--bs-secondary', obj.secondary);
+  document.documentElement.style.setProperty('--bs-accent', obj.accent);
+  document.documentElement.style.setProperty(
+    '--bs-primary-rgb',
+    obj.primaryRGB
+  );
+  document.documentElement.style.setProperty(
+    '--bs-secondary-rgb',
+    obj.secondaryRGB
+  );
+  // Set social icon colors
+  document.documentElement.style.setProperty('--social-icon-bg', obj.socialIconBg);
+  document.documentElement.style.setProperty('--social-icon-color', obj.socialIconColor);
+  document.documentElement.style.setProperty('--social-icon-hover-bg-facebook', obj.socialIconHoverBgFacebook);
+  document.documentElement.style.setProperty('--social-icon-hover-bg-instagram', obj.socialIconHoverBgInstagram);
+  document.documentElement.style.setProperty('--social-icon-hover-bg-github', obj.socialIconHoverBgGitHub);
+  document.documentElement.style.setProperty('--social-icon-hover-bg-linkedin', obj.socialIconHoverBgLinkedIn);
+  document.documentElement.style.setProperty('--social-icon-hover-bg-youtube', obj.socialIconHoverBgYouTube);
+  document.documentElement.style.setProperty('--social-icon-hover-bg-x', obj.socialIconHoverBgX);
+
+  // Add transition class for smooth theme change
+  document.documentElement.classList.add('theme-transition');
+  window.setTimeout(function() {
+    document.documentElement.classList.remove('theme-transition');
+  }, 500);
+}

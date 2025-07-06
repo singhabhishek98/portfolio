@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  
+  <!-- Main Portfolio Page -->
+  <url>
+    <loc>https://codebyabhi.netlify.app/</loc>
+    <lastmod>2025-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    
+    <!-- Images for SEO -->
+    <image:image>
+      <image:loc>https://codebyabhi.netlify.app/img/apple.png</image:loc>
+      <image:caption>TechByAbhi - CodeByAbhi - Abhishek Singh Portfolio Logo</image:caption>
+      <image:title>TechByAbhi - CodeByAbhi Portfolio</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://codebyabhi.netlify.app/img/img.png</image:loc>
+      <image:caption>Abhishek Singh - Full Stack Developer Profile Picture</image:caption>
+      <image:title>Abhishek Singh Profile</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://codebyabhi.netlify.app/img/img1.png</image:loc>
+      <image:caption>TechByAbhi - CodeByAbhi Brand Logo</image:caption>
+      <image:title>TechByAbhi - CodeByAbhi Logo</image:title>
+    </image:image>
+  </url>
+
+  <!-- Home Section -->
+  <url>
+    <loc>https://codebyabhi.netlify.app/#hero</loc>
+    <lastmod>2025-01-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- About Section -->
+  <url>
+    <loc>https://codebyabhi.netlify.app/#about</loc>
+    <lastmod>2025-01-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Projects/Portfolio Section -->
+  <url>
+    <loc>https://codebyabhi.netlify.app/#portfolio</loc>
+    <lastmod>2025-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    
+    <!-- Project Images -->
+    <image:image>
+      <image:loc>https://codebyabhi.netlify.app/img/portfolio/img5.png</image:loc>
+      <image:caption>ChatX - MERN Stack Real-time Chat Application</image:caption>
+      <image:title>ChatX Project</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://codebyabhi.netlify.app/img/portfolio/img1.png</image:loc>
+      <image:caption>Google Gemini Clone - AI Chatbot Application</image:caption>
+      <image:title>Gemini Clone Project</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://codebyabhi.netlify.app/img/portfolio/img4.jpg</image:loc>
+      <image:caption>MERN Stack Login Authentication System</image:caption>
+      <image:title>Login Form MERN Project</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://codebyabhi.netlify.app/img/portfolio/img3.png</image:loc>
+      <image:caption>WeatherWise - Real-time Weather Application</image:caption>
+      <image:title>WeatherWise Project</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://codebyabhi.netlify.app/img/portfolio/img6.png</image:loc>
+      <image:caption>BotX - JavaScript Chatbot Application</image:caption>
+      <image:title>BotX Project</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://codebyabhi.netlify.app/img/portfolio/img2.png</image:loc>
+      <image:caption>MentorConnect - Student-Teacher Platform</image:caption>
+      <image:title>MentorConnect Project</image:title>
+    </image:image>
+  </url>
+
+  <!-- Contact Section -->
+  <url>
+    <loc>https://codebyabhi.netlify.app/#contact</loc>
+    <lastmod>2025-01-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Resume/CV (External Google Drive Link) -->
+  <url>
+    <loc>https://drive.google.com/file/d/1leIF5ucx6Qes8pkRahHzGNqEDgRkeWga/view</loc>
+    <lastmod>2025-01-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Technology Stack Icons -->
+  <url>
+    <loc>https://codebyabhi.netlify.app/img/stack-icons/</loc>
+    <lastmod>2025-01-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    
+    <image:image>
+      <image:loc>https://codebyabhi.netlify.app/img/stack-icons/html.svg</image:loc>
+      <image:caption>HTML5 Technology Icon</image:caption>
+      <image:title>HTML5</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://codebyabhi.netlify.app/img/stack-icons/css.svg</image:loc>
+      <image:caption>CSS3 Technology Icon</image:caption>
+      <image:title>CSS3</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://codebyabhi.netlify.app/img/stack-icons/javascript.svg</image:loc>
+      <image:caption>JavaScript Technology Icon</image:caption>
+      <image:title>JavaScript</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://codebyabhi.netlify.app/img/stack-icons/react-js-icon.svg</image:loc>
+      <image:caption>React.js Technology Icon</image:caption>
+      <image:title>React.js</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://codebyabhi.netlify.app/img/stack-icons/node-js-icon.svg</image:loc>
+      <image:caption>Node.js Technology Icon</image:caption>
+      <image:title>Node.js</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://codebyabhi.netlify.app/img/stack-icons/mongodb-icon.svg</image:loc>
+      <image:caption>MongoDB Database Icon</image:caption>
+      <image:title>MongoDB</image:title>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://codebyabhi.netlify.app/img/stack-icons/java.svg</image:loc>
+      <image:caption>Java Programming Language Icon</image:caption>
+      <image:title>Java</image:title>
+    </image:image>
+  </url>
+
+</urlset>

@@ -1,0 +1,54 @@
+/* Floating WhatsApp Icon with Improved Pulse Animation */
+.whatsapp-float {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: calc(20px + 60px);
+  right: 30px;
+  background-color: #25D366;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 36px;
+  color: #fff;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: whatsapp-pulse 1.8s infinite ease-out;
+}
+
+/* Improved Pulse Animation */
+@keyframes whatsapp-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7),
+                0 0 10px rgba(37, 211, 102, 0.3);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0),
+                0 0 20px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0),
+                0 0 10px rgba(37, 211, 102, 0);
+  }
+}
+
+/* Hover Effect */
+.whatsapp-float:hover {
+  transform: scale(1.2);
+  box-shadow: 2px 2px 18px rgba(37, 211, 102, 0.8);
+}
+
+/* Responsive adjustments for WhatsApp float icon */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 70px;
+    right: 5vw;
+    font-size: 28px;
+  }
+}
