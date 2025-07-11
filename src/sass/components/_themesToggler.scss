@@ -9,7 +9,7 @@
   position: fixed;
   bottom: 0;
   right: 0;
-  margin: 10px; /* 👈 to avoid touching edge completely */
+  margin: 10px;
   background: transparent;
   border: none;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -42,7 +42,7 @@
 
 .icon--moon {
   transition-delay: 200ms;
-  color: #4a90e2;
+  color: var(--theme-dark-mode-color);
   transform: scale(1);
 }
 
@@ -54,12 +54,12 @@
 
 .icon--sun {
   transform: scale(0);
-  color: #ff8c00;
+  color: var(--theme-light-mode-color);
 }
 
 .icon--sun i {
   font-size: 1.3rem;
-  text-shadow: 0 0 15px rgba(255, 140, 0, 0.8), 0 0 30px rgba(255, 140, 0, 0.4);
+  text-shadow: 0 0 15px rgba(242, 197, 113, 0.8), 0 0 30px rgba(242, 197, 113, 0.4);
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 

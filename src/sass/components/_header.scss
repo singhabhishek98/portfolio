@@ -1,14 +1,22 @@
 header #header {
-  background: var(--bs-primary);
-  box-shadow: 0 3px 6px rgba(var(--bs-secondary-rgb), 0.2);
-  color: var(--bs-secondary);
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  background: rgba(13, 17, 23, 0.85); // Dark mode background
+  backdrop-filter: saturate(180%) blur(10px);
+  box-shadow: 0 8px 20px rgba(5, 100, 189, 0.25);
+  color: #ffffff; // Default text color
   font-family: 'Raleway', sans-serif;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 
   .navbar-brand {
     display: block;
     width: 40%;
     padding: 0;
-    color: var(--bs-secondary);
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 700;
+
     @include media($bp-md) {
       width: 30%;
     }
@@ -23,7 +31,9 @@ header #header {
   .nav-link {
     position: relative;
     width: fit-content;
-    color: var(--bs-secondary);
+    color: #ffffff;
+    margin: 0 1rem;
+    font-weight: 600;
 
     &::before {
       content: '';
@@ -32,7 +42,6 @@ header #header {
       background-color: var(--bs-accent);
       @include transition;
       border-radius: 50px;
-
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -43,20 +52,82 @@ header #header {
       width: 70%;
     }
 
+    &:hover {
+      color: var(--bs-accent);
+      font-weight: 700;
+    }
+
     &.active {
       color: var(--bs-accent);
+      font-weight: 700;
     }
-  }
 
-  /* Accessibility: focus styles for nav links */
-  .nav-link:focus-visible {
-    outline: 2px solid var(--bs-accent);
-    outline-offset: 2px;
+    &:focus-visible {
+      outline: 2px solid var(--bs-accent);
+      outline-offset: 2px;
+    }
   }
 }
 
-/* Ensure navbar toggler button is fully visible on small screens */
+// ✅ ✅ ✅ LIGHT MODE FIXED HERE
+@media (prefers-color-scheme: light) {
+  header #header {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    color: #111 !important;
+  }
+
+  header #header .navbar-brand {
+    color: #111 !important;
+    font-weight: 700;
+  }
+
+  header #header .nav-link {
+    color: #111 !important; // ✅ Now clearly visible on light mode
+    font-weight: 700;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1); // optional for crisp text
+  }
+
+  header #header .nav-link:hover {
+    color: #0366d6;
+    font-weight: 800;
+  }
+
+  header #header .nav-link::before {
+    background-color: #0366d6;
+  }
+
+  header #header .nav-link.active {
+    color: #0366d6;
+    font-weight: 800;
+  }
+
+  header #header .navbar-toggler {
+    border-color: #0366d6;
+  }
+
+  header #header .navbar-toggler:hover {
+    background-color: #0366d6;
+    border-color: #0366d6;
+  }
+}
+
+// Navbar toggler button (both modes)
 .navbar-toggler {
-  z-index: 1051; /* higher than Bootstrap modal backdrop */
+  z-index: 1051;
   position: relative;
+  border: 2px solid var(--bs-accent);
+  border-radius: 8px;
+  background-color: transparent;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--bs-accent);
+    border-color: var(--bs-accent);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--bs-accent);
+    outline-offset: 2px;
+  }
 }
