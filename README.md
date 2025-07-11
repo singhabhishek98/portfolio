@@ -1,7 +1,9 @@
 <div align="center">
   <h3>📌 Portfolio</h3>
     <p>Welcome to my personal portfolio! This project showcases my skills, projects, and experience in web development.</p>
-  <img src="src/img/UI.png" alt="Portfolio UI Preview" width="500" />
+</div>
+<div align="center">
+  <img src="https://github.com/singhabhishek98/portfolio UI.png" width="100%"/>
 </div>
 
 ## 🚀 Live Demo
