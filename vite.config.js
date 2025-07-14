@@ -15,6 +15,7 @@ export default {
       '@': path.join(__dirname, 'src')
     }
   },
+  publicDir: path.resolve(__dirname, 'public'),
   server: {
     host: '0.0.0.0',
     port: 5174

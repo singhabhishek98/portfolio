@@ -1,13 +1,37 @@
+// 🌟 Custom Fonts
+@font-face {
+  font-family: 'Raleway';
+  src: url('@/fonts/raleway_normal_400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway Italic';
+  src: url('@/fonts/raleway_italic_500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Finger Paint';
+  src: url('@/fonts/finger_paint.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+// Bootstrap functions
 @import '../../node_modules/bootstrap/scss/functions';
 
-// overwrite Bootstrap variables
+// Overwrite Bootstrap variables
 @import './base/variables';
 
-// required Bootstrap stylesheets
+// Required Bootstrap stylesheets
 @import '../../node_modules/bootstrap/scss/variables';
 @import '../../node_modules/bootstrap/scss/mixins';
 
-// required Bootstrap components
+// Required Bootstrap components
 @import '../../node_modules/bootstrap/scss/root';
 @import '../../node_modules/bootstrap/scss/reboot';
 @import '../../node_modules/bootstrap/scss/containers';
@@ -20,14 +44,12 @@
 @import '../../node_modules/bootstrap/scss/buttons';
 @import '../../node_modules/bootstrap/scss/spinners';
 
-// Bootstrap icons
-$bootstrap-icons-font-src: url('../../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2')
-    format('woff2'),
-  url('../../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff')
-    format('woff');
+// Bootstrap Icons
+$bootstrap-icons-font-src: url('../../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2') format('woff2'),
+  url('../../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff') format('woff');
 @import '../../node_modules/bootstrap-icons/font/bootstrap-icons.scss';
 
-// Base
+// Base styles
 @import './base/typography';
 @import './base/mixin';
 
