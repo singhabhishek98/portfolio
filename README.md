@@ -2,9 +2,11 @@
   <h3>📌 Portfolio</h3>
     <p>Welcome to my personal portfolio! This project showcases my skills, projects, and experience in web development.</p>
 </div>
+
 <div align="center">
-  <img src="https://github.com/singhabhishek98/portfolio UI.png" width="100%"/>
+  <img src="https://raw.githubusercontent.com/singhabhishek98/portfolio/main/UI.png" width="100%" />
 </div>
+
 
 ## 🚀 Live Demo
 Check out the live version of my portfolio:  
@@ -23,7 +25,6 @@ Port/
 ├── src/
 │   ├── fonts/
 │   ├── img/
-│   │   └── UI.png
 │   ├── js/
 │   ├── base/
 │   ├── components/
