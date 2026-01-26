@@ -4,6 +4,17 @@
   h1 {
     @include h1;
   }
+  
+  // Hide any unwanted text that might be injected
+  &::before,
+  &::after {
+    display: none !important;
+  }
+  
+  .container::before,
+  .container::after {
+    display: none !important;
+  }
 
   .project {
     position: relative;

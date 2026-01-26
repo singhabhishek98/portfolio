@@ -8,7 +8,12 @@ export default {
   base: './',
   build: {
     outDir: '../dist',
-    emptyOutDir: true
+    emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name].[hash][extname]'
+      }
+    }
   },
   resolve: {
     alias: {
@@ -19,5 +24,8 @@ export default {
   server: {
     host: '0.0.0.0',
     port: 5174
+  },
+  css: {
+    devSourcemap: true
   }
 };

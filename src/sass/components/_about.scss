@@ -9,11 +9,28 @@
     h1 {
       @include h1;
     }
+    
+    p {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      max-width: 100%;
+      
+      @include media($bp-sm) {
+        font-size: 0.95rem;
+      }
+      
+      @include media($bp-md) {
+        font-size: 1rem;
+      }
+    }
   }
 
   #skills_section {
     @include media($bp-lg) {
-      margin-top: -17%;
+      margin-top: 0;
     }
     @include media($bp-xl) {
       margin-top: 0;
@@ -24,19 +41,21 @@
     }
 
     img {
-      height: 2rem;
+      height: 1.8rem;
       @include transition;
+      max-width: 100%;
 
       &:hover {
-        transform: scale(1.1);
+        transform: scale(1.1) rotate(5deg);
+        filter: drop-shadow(0 3px 10px rgba(5, 100, 189, 0.3));
       }
 
       @include media($bp-md) {
-        height: 2.5rem;
+        height: 2rem;
       }
 
       @include media($bp-xl) {
-        height: 3rem;
+        height: 2.2rem;
       }
     }
 
@@ -44,12 +63,30 @@
       font-style: italic;
       font-weight: 500;
       margin-left: 0.5rem;
+      word-wrap: break-word;
+      font-size: 0.9rem;
+      @include transition;
     }
 
     .col-6 {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       display: flex;
       align-items: center;
+      overflow: hidden;
+      padding: 0.7rem;
+      border-radius: 10px;
+      @include transition;
+      
+      &:hover {
+        background: rgba(5, 100, 189, 0.1);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(5, 100, 189, 0.15);
+        
+        span {
+          color: var(--bs-accent);
+          font-weight: 600;
+        }
+      }
     }
   }
 }

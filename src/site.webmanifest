@@ -1,0 +1,20 @@
+{
+  "name": "CodeByAbhi Portfolio",
+  "short_name": "CodeByAbhi",
+  "icons": [
+    {
+      "src": "/img/img1.png",
+      "sizes": "250x250",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#0564bd",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/"
+}
