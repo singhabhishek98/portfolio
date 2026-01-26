@@ -18,6 +18,107 @@
       font-weight: 500;
     }
   }
+
+  .attractive-form-wrapper {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  .input-group-attractive {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+
+  .attractive-input {
+    padding-left: 3rem !important;
+    border-radius: 10px !important;
+    border: 2px solid rgba(var(--bs-secondary-rgb), 0.3) !important;
+    background: rgba(var(--bs-primary-rgb), 0.8) !important;
+    transition: all 0.3s ease !important;
+    color: var(--bs-secondary) !important;
+  }
+
+  .attractive-input:focus {
+    border-color: var(--bs-accent) !important;
+    box-shadow: 0 0 0 0.2rem rgba(5, 100, 189, 0.25) !important;
+    background: rgba(var(--bs-secondary-rgb), 0.1) !important;
+  }
+
+  .input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--bs-accent);
+    font-size: 1.1rem;
+    z-index: 10;
+  }
+
+  .textarea-icon {
+    top: 1rem;
+    transform: none;
+  }
+
+  .attractive-btn {
+    background: linear-gradient(135deg, var(--bs-accent), #4a90e2);
+    border: none;
+    border-radius: 25px;
+    padding: 0.8rem 2rem;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(5, 100, 189, 0.3);
+  }
+
+  .attractive-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(5, 100, 189, 0.4);
+    background: linear-gradient(135deg, #4a90e2, var(--bs-accent));
+  }
+
+  .attractive-btn:active {
+    transform: translateY(0);
+  }
+
+  .attractive-btn:disabled {
+    opacity: 0.7;
+    transform: none;
+  }
+}
+
+.toast-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #333;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  transform: translateX(400px);
+  transition: transform 0.3s ease;
+}
+
+.toast-notification.show {
+  transform: translateX(0);
+}
+
+.toast-notification.success {
+  background: #28a745;
+}
+
+.toast-notification.error {
+  background: #dc3545;
+}
+
+.toast-notification.warning {
+  background: #ffc107;
+  color: #333;
 }
 
 .thanks {

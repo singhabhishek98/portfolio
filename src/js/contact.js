@@ -4,95 +4,89 @@ const emailInput = document.querySelector('#email');
 const subjectInput = document.querySelector('#subject');
 const messageInput = document.querySelector('#message');
 const submitButton = document.querySelector('#send');
-const thanksMessage = document.querySelector('.thanks');
-const spinner = document.querySelector('.spinner-border');
-const charCounter = document.querySelector('.valid-feedback');
+const charCounter = document.querySelector('.char-counter');
 
-const emailPattern = new RegExp("^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$");
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 // EmailJS configuration
 const SERVICE_ID = 'service_ga3651o';
-const TEMPLATE_ID = 'template_8lfbjzq'; // Replace with your actual template ID
-const USER_ID = 'Hrg8hqQiqNUHEGlgf'; // Your public key
+const TEMPLATE_ID = 'template_8lfbjzq';
+const USER_ID = 'Hrg8hqQiqNUHEGlgf';
 
-const warningClass = 'is-invalid';
-const successClass = 'is-valid';
-
-// function to add/remove classes
-function setUpClasses(e, isValid) {
-  const input = e.target;
-
-  if (isValid) {
-    input.classList.add(successClass);
-    input.classList.remove(warningClass);
-  } else {
-    input.classList.add(warningClass);
-    input.classList.remove(successClass);
-  }
+// Toast notification function
+function showToast(message, type = 'success') {
+  const toast = document.createElement('div');
+  toast.className = `toast-notification ${type}`;
+  toast.textContent = message;
+  document.body.appendChild(toast);
+  
+  setTimeout(() => toast.classList.add('show'), 100);
+  
+  setTimeout(() => {
+    toast.classList.remove('show');
+    setTimeout(() => document.body.removeChild(toast), 300);
+  }, 3000);
 }
 
-nameInput.addEventListener('keyup', e => {
-  setUpClasses(e, e.target.value.trim().length > 1 ? true : false);
-  checkAllInputs();
-});
-
-emailInput.addEventListener('keyup', e => {
-  setUpClasses(e, e.target.value.trim().match(emailPattern) ? true : false);
-  checkAllInputs();
-});
-
-subjectInput.addEventListener('keyup', e => {
-  setUpClasses(e, e.target.value.trim().length > 2 ? true : false);
-  checkAllInputs();
-});
-
-messageInput.addEventListener('keyup', e => {
-  setUpClasses(e, e.target.value.trim().length >= 2 ? true : false);
-  checkAllInputs();
-  charCounter.textContent = `${messageInput.value.length} / 400`;
-});
-
-// disable submitButton if the inputs have not achieved the conditions
-function checkAllInputs() {
-  submitButton.disabled =
-    nameInput.value.trim().length > 1 &&
-    emailInput.value.trim().match(emailPattern) &&
-    subjectInput.value.trim().length > 2 &&
-    messageInput.value.trim().split(' ').length > 1
-      ? false
-      : true;
+// Character counter for message
+if (messageInput && charCounter) {
+  messageInput.addEventListener('input', () => {
+    const length = messageInput.value.length;
+    charCounter.textContent = `${length} / 400`;
+  });
 }
 
 // Send Email
 async function sendEmail(e) {
   e.preventDefault();
-  submitButton.style.display = 'none';
-  spinner.style.display = 'inline-block';
-
+  
+  const name = nameInput.value.trim();
+  const email = emailInput.value.trim();
+  const subject = subjectInput.value.trim();
+  const message = messageInput.value.trim();
+  
+  // Validation
+  if (!name) {
+    showToast('Please enter your name', 'warning');
+    return;
+  }
+  
+  if (!email || !emailPattern.test(email)) {
+    showToast('Please enter a valid email', 'warning');
+    return;
+  }
+  
+  if (!subject) {
+    showToast('Please enter a subject', 'warning');
+    return;
+  }
+  
+  // Show loading
+  submitButton.disabled = true;
+  submitButton.textContent = 'Sending...';
+  
   const templateParams = {
-    name: nameInput.value.trim(),
-    email: emailInput.value.trim(),
-    subject: subjectInput.value.trim(),
-    message: messageInput.value.trim(),
+    name: name,
+    email: email,
+    subject: subject,
+    message: message || 'No message provided',
   };
-
+  
   try {
     await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, USER_ID);
-    thanksMessage.style.display = 'block';
-    e.target.reset();
-    [nameInput, emailInput, subjectInput, messageInput].forEach(input => {
-      input.classList.remove(successClass);
-    });
+    showToast('Message sent successfully! 🚀', 'success');
+    contactForm.reset();
+    if (charCounter) charCounter.textContent = '0 / 400';
   } catch (error) {
     console.error('Failed to send email:', error);
-    alert('Failed to send email. Please try again later.');
+    showToast('Failed to send message. Please try again.', 'error');
   } finally {
-    spinner.style.display = 'none';
-    submitButton.style.display = 'block';
+    submitButton.disabled = false;
+    submitButton.innerHTML = '<i class="bi bi-send me-2"></i>Send Message';
   }
 }
 
-contactForm.addEventListener('submit', sendEmail);
-
-// clear form on load page
-contactForm.reset();
+if (contactForm) {
+  contactForm.addEventListener('submit', sendEmail);
+  contactForm.reset();
+}
