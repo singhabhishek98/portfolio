@@ -4,14 +4,3 @@ $theme-colors: (
   'secondary': #444f5a,
   'accent': #0564bd
 );
-
-// Custom properties for theme colors
-:root {
-  --theme-dark-mode-color: #4a90e2;
-  --theme-light-mode-color: #ff8c00;
-  
-  // Enhanced project border colors
-  --project-border-primary: rgba(5, 100, 189, 0.4);
-  --project-border-hover: rgba(5, 100, 189, 0.6);
-  --project-glow: rgba(5, 100, 189, 0.2);
-}

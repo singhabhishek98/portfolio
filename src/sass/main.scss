@@ -24,11 +24,27 @@
 // Bootstrap functions
 @import '../../node_modules/bootstrap/scss/functions';
 
-// Overwrite Bootstrap variables
-@import './base/variables';
+// Define custom variable overrides BEFORE bootstrap defaults
+$theme-colors: (
+  'primary': #ffffff,
+  'secondary': #444f5a,
+  'accent': #0564bd
+) !default;
+
+// Explicitly define $gutters before Bootstrap to ensure it's available
+$gutters: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem
+) !default;
 
 // Required Bootstrap stylesheets
 @import '../../node_modules/bootstrap/scss/variables';
+
+// Bootstrap mixins (use variables)
 @import '../../node_modules/bootstrap/scss/mixins';
 
 // Required Bootstrap components
@@ -64,6 +80,17 @@ html {
   @include media($bp-xxl) {
     font-size: 18px;
   }
+}
+
+// Custom CSS properties for theme colors
+:root {
+  --theme-dark-mode-color: #4a90e2;
+  --theme-light-mode-color: #ff8c00;
+  
+  // Enhanced project border colors
+  --project-border-primary: rgba(5, 100, 189, 0.4);
+  --project-border-hover: rgba(5, 100, 189, 0.6);
+  --project-glow: rgba(5, 100, 189, 0.2);
 }
 
 body {
