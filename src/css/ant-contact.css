@@ -59,7 +59,20 @@ html[data-theme='dark'] .ant-contact-form textarea.ant-input {
 html[data-theme='dark'] .ant-contact-form .ant-input,
 html[data-theme='dark'] .ant-contact-form textarea.ant-input {
   border-color: rgba(148, 163, 184, 0.32);
-  background: #0f172a;
+  background: transparent;
+  box-shadow: none;
+}
+
+html[data-theme='dark'] .ant-contact-form .ant-input:focus,
+html[data-theme='dark'] .ant-contact-form textarea.ant-input:focus {
+  background: transparent;
+}
+
+html[data-theme='dark'] .ant-contact-form .ant-input::placeholder,
+html[data-theme='dark'] .ant-contact-form textarea.ant-input::placeholder,
+html[data-theme='dark'] .ant-contact-form .ant-input-data-count {
+  color: #94a3b8 !important;
+  opacity: 1;
 }
 
 @media (max-width: 991px) {

@@ -3,7 +3,7 @@
   "short_name": "CodeByAbhi",
   "icons": [
     {
-      "src": "/favicon.svg",
+      "src": "/favicon.svg?v=2",
       "sizes": "48x48",
       "type": "image/svg+xml"
     },
