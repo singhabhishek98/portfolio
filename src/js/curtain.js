@@ -4,7 +4,7 @@ import {
   Vec2
 } from '../../node_modules/curtainsjs/src/index.mjs';
 
-window.addEventListener('load', () => {
+const initializeCurtains = () => {
   // track the mouse positions to send it to the shaders
   const mousePosition = new Vec2();
   // we will keep track of the last position in order to calculate the movement strength/delta
@@ -218,4 +218,10 @@ window.addEventListener('load', () => {
       }
     }
   }
-});
+};
+
+if (document.readyState === 'complete') {
+  initializeCurtains();
+} else {
+  window.addEventListener('load', initializeCurtains, { once: true });
+}
