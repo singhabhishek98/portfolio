@@ -50,7 +50,7 @@ function ContactForm() {
             <TextArea placeholder="Message (Optional)" rows={4} maxLength={400} showCount />
           </Form.Item>
           <div className="ant-contact-form__actions">
-            <Button type="primary" htmlType="submit">Send</Button>
+            <Button type="primary" htmlType="submit" icon={<SendOutlined />}>Send Message</Button>
           </div>
         </Form>
       </div>
