@@ -1103,3 +1103,98 @@ button.btn[disabled] {
     font-size: 28px;
   }
 }
+
+/* Ant Design navigation */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-left: auto;
+}
+
+header #header .header-actions .nav-link,
+.drawer-navigation .nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+}
+
+header #header .header-actions .nav-link {
+  margin: 0 0.35rem;
+}
+
+.header-resume.ant-btn {
+  height: 2.45rem;
+  margin-left: 0.35rem;
+  border: 1px solid rgba(79, 195, 247, 0.6);
+  border-radius: 999px;
+  background: transparent;
+  box-shadow: none;
+  color: var(--bs-accent);
+  font-weight: 700;
+}
+
+.header-resume.ant-btn:hover,
+.header-resume.ant-btn:focus {
+  border-color: var(--bs-accent) !important;
+  background: rgba(5, 100, 189, 0.1) !important;
+  color: var(--bs-accent) !important;
+}
+
+.mobile-menu-button.ant-btn {
+  display: none;
+  width: 2.7rem;
+  height: 2.7rem;
+  border: 1px solid rgba(79, 195, 247, 0.65);
+  border-radius: 0.65rem;
+  color: var(--bs-accent);
+  font-size: 1.2rem;
+}
+
+.drawer-navigation {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.drawer-navigation .nav-link {
+  width: 100%;
+  padding: 0.75rem 0.85rem;
+  border-radius: 0.65rem;
+  color: var(--bs-secondary);
+  font-weight: 700;
+}
+
+.drawer-navigation .nav-link:hover,
+.drawer-navigation .nav-link.active {
+  color: var(--bs-accent);
+  background: rgba(5, 100, 189, 0.08);
+}
+
+.drawer-navigation .header-resume.ant-btn {
+  margin: 0.45rem 0 0;
+}
+
+html[data-theme='dark'] .site-navigation-drawer .ant-drawer-content,
+html[data-theme='dark'] .site-navigation-drawer .ant-drawer-header {
+  background: #182231;
+}
+
+html[data-theme='dark'] .site-navigation-drawer .ant-drawer-title,
+html[data-theme='dark'] .site-navigation-drawer .ant-drawer-close,
+html[data-theme='dark'] .drawer-navigation .nav-link {
+  color: #e5edf7;
+}
+
+@media screen and (max-width: 991.98px) {
+  .header-actions {
+    display: none;
+  }
+
+  .mobile-menu-button.ant-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
+}

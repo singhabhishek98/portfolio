@@ -4,11 +4,11 @@ import { Collapse } from 'bootstrap';
 // scroll spy
 import { ScrollSpy } from 'bootstrap';
 
-const navigation = document.querySelector('#toggleMobileMenu');
+const navigation = document.querySelector('#site-navigation');
 
 if (navigation) {
   ScrollSpy.getOrCreateInstance(document.body, {
-    target: '#toggleMobileMenu',
+    target: '#site-navigation',
     rootMargin: '0px 0px -35%',
   });
 }
