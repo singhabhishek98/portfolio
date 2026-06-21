@@ -82,7 +82,7 @@ async function sendEmail(e) {
     showToast('Failed to send message. Please try again.', 'error');
   } finally {
     submitButton.disabled = false;
-    submitButton.innerHTML = '<i class="bi bi-send me-2"></i>Send Message';
+    submitButton.innerHTML = '<i class="bi bi-send me-2"></i>Send';
   }
 }
 
