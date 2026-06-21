@@ -16478,6 +16478,13 @@ body {
   overflow-x: hidden;
 }
 
+#hero,
+#about,
+#portfolio,
+#contact {
+  scroll-margin-top: 5.5rem;
+}
+
 header #header {
   position: sticky;
   top: 0;
@@ -16521,18 +16528,18 @@ header #header .nav-link {
 }
 header #header .nav-link::before {
   content: "";
-  height: 2px;
+  height: 3px;
   width: 0;
-  background-color: var(--bs-accent);
-  transition: 0.4s all ease-in-out;
+  background: linear-gradient(90deg, #4fc3f7, var(--bs-accent));
+  transition: width 0.4s ease-in-out;
   border-radius: 50px;
   position: absolute;
-  bottom: 0;
+  bottom: 0.22rem;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
 }
 header #header .nav-link:hover::before {
-  width: 70%;
+  width: calc(100% - 1.6rem);
 }
 header #header .nav-link:hover {
   color: var(--bs-accent);
