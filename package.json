@@ -9,8 +9,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --emptyOutDir",
-    "serve": "vite preview",
-    "compile:sass": "sass src/sass:src/css"
+    "serve": "vite preview"
   },
   "keywords": [],
   "author": "Abhishek Singh <abhisingh10298@gmail.com>",
@@ -25,7 +24,6 @@
     "lazysizes": "^5.3.2",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "sass": "^1.51.0",
     "typed.js": "^2.0.12",
     "vite": "^6.1.0"
   },

@@ -1,6 +1,3 @@
-// style
-import '../sass/main.scss';
-
 // navbar
 import { Collapse } from 'bootstrap';
 
