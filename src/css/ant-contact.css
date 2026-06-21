@@ -1,0 +1,84 @@
+.ant-contact-form {
+  padding: 2rem;
+  border: 1px solid rgba(68, 79, 90, 0.16);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.ant-contact-form__row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.ant-contact-form .ant-form-item-label > label {
+  color: var(--bs-secondary);
+  font-weight: 600;
+}
+
+.ant-contact-form .ant-input,
+.ant-contact-form textarea.ant-input {
+  color: var(--bs-secondary);
+  border-color: rgba(var(--bs-secondary-rgb), 0.3);
+  background: rgba(var(--bs-primary-rgb), 0.8);
+}
+
+.ant-contact-form .ant-input::placeholder,
+.ant-contact-form .ant-input-data-count {
+  color: color-mix(in srgb, var(--bs-secondary) 55%, transparent);
+}
+
+.ant-contact-form .ant-input-prefix {
+  color: var(--bs-accent);
+}
+
+.ant-contact-form__actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ant-contact-form__actions .ant-btn {
+  height: auto;
+  padding: 0.75rem 1.35rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+html[data-theme='dark'] .ant-contact-form {
+  border-color: rgba(148, 163, 184, 0.2);
+  background: #182231;
+}
+
+html[data-theme='dark'] .ant-contact-form .ant-form-item-label > label,
+html[data-theme='dark'] .ant-contact-form .ant-input,
+html[data-theme='dark'] .ant-contact-form textarea.ant-input {
+  color: #e5edf7;
+}
+
+html[data-theme='dark'] .ant-contact-form .ant-input,
+html[data-theme='dark'] .ant-contact-form textarea.ant-input {
+  border-color: rgba(148, 163, 184, 0.32);
+  background: #0f172a;
+}
+
+@media (max-width: 991px) {
+  .ant-contact-form__row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .ant-contact-form {
+    padding: 1.25rem;
+  }
+
+  .ant-contact-form__actions {
+    justify-content: stretch;
+  }
+
+  .ant-contact-form__actions .ant-btn {
+    width: 100%;
+  }
+}
