@@ -1125,13 +1125,15 @@ header #header .header-actions .nav-link {
 }
 
 .header-resume.ant-btn {
-  height: 2.45rem;
+  height: 2.05rem;
   margin-left: 0.35rem;
+  padding-inline: 0.65rem;
   border: 1px solid rgba(79, 195, 247, 0.6);
   border-radius: 999px;
   background: transparent;
   box-shadow: none;
   color: var(--bs-accent);
+  font-size: 0.8rem;
   font-weight: 700;
 }
 
