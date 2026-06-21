@@ -90,6 +90,35 @@
   }
 }
 
+html[data-theme='light'] #contact {
+  .attractive-form-wrapper {
+    background: rgba(255, 255, 255, 0.78);
+    border-color: rgba(68, 79, 90, 0.16);
+  }
+
+  .attractive-input,
+  .attractive-input:focus {
+    background: #ffffff !important;
+    color: #444f5a !important;
+  }
+}
+
+html[data-theme='dark'] #contact {
+  .attractive-form-wrapper {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .attractive-input {
+    background: rgba(33, 33, 33, 0.8) !important;
+    color: #a2a1a6 !important;
+  }
+
+  .attractive-input:focus {
+    background: rgba(162, 161, 166, 0.1) !important;
+  }
+}
+
 .toast-notification {
   position: fixed;
   top: 20px;

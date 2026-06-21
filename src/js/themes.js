@@ -22,19 +22,24 @@ const themes = {
 
 let isLight = true;
 
-// On page load, check localStorage for theme preference
-document.addEventListener('DOMContentLoaded', () => {
+function initializeTheme() {
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'dark') {
-    applyTheme(themes.dark);
+    applyTheme(themes.dark, 'dark');
     switchInput.checked = true;
     isLight = false;
   } else {
-    applyTheme(themes.light);
+    applyTheme(themes.light, 'light');
     switchInput.checked = false;
     isLight = true;
   }
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initializeTheme, { once: true });
+} else {
+  initializeTheme();
+}
 
 // Add click event to toggle div
 themeToggler.addEventListener('click', () => {
@@ -42,7 +47,7 @@ themeToggler.addEventListener('click', () => {
   toggleThemes();
 });
 
-function applyTheme(obj) {
+function applyTheme(obj, themeName) {
   document.documentElement.style.setProperty('--bs-primary', obj.primary);
   document.documentElement.style.setProperty('--bs-secondary', obj.secondary);
   document.documentElement.style.setProperty('--bs-accent', obj.accent);
@@ -54,6 +59,7 @@ function applyTheme(obj) {
     '--bs-secondary-rgb',
     obj.secondaryRGB
   );
+  document.documentElement.dataset.theme = themeName;
   // Add transition class for smooth theme change
   document.documentElement.classList.add('theme-transition');
   window.setTimeout(function() {
@@ -64,12 +70,12 @@ function applyTheme(obj) {
 function toggleThemes() {
   if (switchInput.checked) {
     // Switch to dark mode
-    applyTheme(themes.dark);
+    applyTheme(themes.dark, 'dark');
     localStorage.setItem('theme', 'dark');
     isLight = false;
   } else {
     // Switch to light mode
-    applyTheme(themes.light);
+    applyTheme(themes.light, 'light');
     localStorage.setItem('theme', 'light');
     isLight = true;
   }

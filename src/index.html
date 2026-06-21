@@ -75,6 +75,7 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#toggleMobileMenu" data-bs-offset="0" tabindex="0">
+  <template id="legacy-portfolio-template">
   <!-- ==== Header ==== -->
   <header class="sticky-top">
     <nav class="navbar navbar-expand-lg navbar-light" id="header">
@@ -639,8 +640,6 @@
     <div class="icon icon--sun"><i class="bi bi-brightness-high-fill"></i></div>
   </div>
   
-<script type="module" src="./js/main.js"></script>
-  
 <!-- Chat Assistant -->
 
 <!-- <script
@@ -659,5 +658,8 @@
 </script>
 <div class="gcse-search"></div> -->
 
+  </template>
+  <div id="root"></div>
+  <script type="module" src="./js/main.jsx"></script>
 </body>
 </html>
