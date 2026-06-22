@@ -116,12 +116,16 @@ header #header {
   position: sticky;
   top: 0;
   z-index: 1100;
+  min-height: 76px;
   background: rgba(13, 17, 23, 0.85);
   backdrop-filter: saturate(180%) blur(10px);
   box-shadow: 0 8px 20px rgba(5, 100, 189, 0.25);
   color: #ffffff;
   font-family: "Raleway", sans-serif;
   transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+header #header > .container {
+  min-height: 76px;
 }
 header #header .navbar-brand {
   display: block;
@@ -1117,6 +1121,187 @@ button.btn[disabled] {
   margin-left: auto;
 }
 
+.time-greeting {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  color: var(--greeting-color);
+  font-size: 0.95rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.time-greeting .anticon {
+  color: var(--greeting-color);
+  font-size: 1.1rem;
+}
+
+.time-greeting--morning {
+  --greeting-color: #f59e0b;
+}
+
+.time-greeting--morning > .anticon {
+  animation: morning-sun 5s linear infinite;
+}
+
+.morning-sky {
+  position: absolute;
+  top: -1rem;
+  left: 0.75rem;
+  width: 6.2rem;
+  height: 1.05rem;
+  overflow: hidden;
+  background: transparent;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.morning-cloud {
+  position: absolute;
+  right: 0.25rem;
+  bottom: -0.15rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  animation: cloud-drift 7s ease-in-out infinite alternate;
+}
+
+.morning-bird {
+  position: absolute;
+  top: 0.15rem;
+  left: -1rem;
+  font-size: 0.65rem;
+  animation: bird-flight 5s ease-in-out infinite;
+}
+
+.morning-bird:last-child {
+  top: 0.35rem;
+  animation-delay: 1.1s;
+  animation-duration: 6s;
+}
+
+@keyframes bird-flight {
+  0% {
+    transform: translateX(0) translateY(0) rotate(-8deg);
+    opacity: 0;
+  }
+  15%, 80% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(2.8rem) translateY(-0.18rem) rotate(5deg);
+  }
+  100% {
+    transform: translateX(5.7rem) translateY(0.08rem) rotate(-5deg);
+    opacity: 0;
+  }
+}
+
+@keyframes cloud-drift {
+  to {
+    transform: translateX(-0.7rem);
+  }
+}
+
+@keyframes morning-sun {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.greeting-scene {
+  position: absolute;
+  top: -0.95rem;
+  left: 0.8rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 0.7rem;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.noon-scene {
+  color: #fb923c;
+  animation: noon-glow 1.8s ease-in-out infinite alternate;
+}
+
+.afternoon-scene {
+  color: #facc15;
+  animation: afternoon-drift 6s ease-in-out infinite alternate;
+}
+
+.evening-scene {
+  color: #c084fc;
+  animation: evening-set 4s ease-in-out infinite alternate;
+}
+
+.night-scene {
+  color: #bae6fd;
+  animation: star-twinkle 1.7s ease-in-out infinite alternate;
+}
+
+@keyframes noon-glow {
+  to {
+    opacity: 0.55;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes afternoon-drift {
+  to {
+    transform: translateX(0.8rem);
+  }
+}
+
+@keyframes evening-set {
+  to {
+    transform: translateY(0.2rem);
+    opacity: 0.65;
+  }
+}
+
+@keyframes star-twinkle {
+  to {
+    opacity: 0.35;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .time-greeting--morning > .anticon,
+  .morning-bird,
+  .morning-cloud,
+  .greeting-scene {
+    animation: none;
+  }
+}
+
+.time-greeting--noon {
+  --greeting-color: #f97316;
+}
+
+.time-greeting--afternoon {
+  --greeting-color: #eab308;
+}
+
+.time-greeting--evening {
+  --greeting-color: #a78bfa;
+}
+
+.time-greeting--night {
+  --greeting-color: #60a5fa;
+}
+
+header #header .greeting-brand {
+  width: auto;
+}
+
+.drawer-navigation .time-greeting {
+  width: fit-content;
+  margin-bottom: 0.4rem;
+}
+
 header #header .header-actions .nav-link,
 .drawer-navigation .nav-link {
   display: inline-flex;
@@ -1179,7 +1364,12 @@ header #header .header-actions .nav-link {
 }
 
 .drawer-navigation .header-resume.ant-btn {
+  width: fit-content;
+  height: 1.9rem;
   margin: 0.45rem 0 0;
+  padding-inline: 0.55rem;
+  font-size: 0.75rem;
+  justify-self: start;
 }
 
 html[data-theme='dark'] .site-navigation-drawer .ant-drawer-content,
