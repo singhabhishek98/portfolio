@@ -20,6 +20,11 @@
   font-style: normal;
 }
 :root {
+  --bs-primary: #ffffff;
+  --bs-secondary: #444f5a;
+  --bs-accent: #0564bd;
+  --bs-primary-rgb: 255, 255, 255;
+  --bs-secondary-rgb: 68, 79, 90;
   --theme-dark-mode-color: #4a90e2;
   --theme-light-mode-color: #ff8c00;
   --project-border-primary: rgba(5, 100, 189, 0.4);

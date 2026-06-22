@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Drawer } from 'antd';
+import logo from '../img/img1.png';
 import {
   FileTextOutlined,
   FolderOpenOutlined,
@@ -33,7 +34,7 @@ function Header() {
       <nav className="navbar navbar-light" id="header" aria-label="Primary navigation">
         <div className="container">
           <a className="navbar-brand" href="#hero" aria-label="CodeByAbhi home">
-            <img src="./img/img1.png" width="250" loading="eager" alt="CodeByAbhi Logo" />
+            <img src={logo} width="250" loading="eager" alt="CodeByAbhi Logo" />
           </a>
 
           <div className="header-actions" id="site-navigation">
