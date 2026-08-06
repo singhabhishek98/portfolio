@@ -1221,37 +1221,16 @@ button.btn[disabled] {
   color: rgba(255, 255, 255, 0.9);
   font-size: 1rem;
   animation: cloud-drift 7s ease-in-out infinite alternate;
+  z-index: 1;
 }
 
-.morning-bird {
+.morning-bird-gif {
   position: absolute;
-  top: 0.15rem;
-  left: -1rem;
-  font-size: 0.65rem;
-  animation: bird-flight 5s ease-in-out infinite;
-}
-
-.morning-bird:last-child {
-  top: 0.35rem;
-  animation-delay: 1.1s;
-  animation-duration: 6s;
-}
-
-@keyframes bird-flight {
-  0% {
-    transform: translateX(0) translateY(0) rotate(-8deg);
-    opacity: 0;
-  }
-  15%, 80% {
-    opacity: 1;
-  }
-  50% {
-    transform: translateX(2.8rem) translateY(-0.18rem) rotate(5deg);
-  }
-  100% {
-    transform: translateX(5.7rem) translateY(0.08rem) rotate(-5deg);
-    opacity: 0;
-  }
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 2;
 }
 
 @keyframes cloud-drift {
@@ -1292,11 +1271,6 @@ button.btn[disabled] {
   animation: evening-set 4s ease-in-out infinite alternate;
 }
 
-.night-scene {
-  color: #bae6fd;
-  animation: star-twinkle 1.7s ease-in-out infinite alternate;
-}
-
 @keyframes noon-glow {
   to {
     opacity: 0.55;
@@ -1317,15 +1291,8 @@ button.btn[disabled] {
   }
 }
 
-@keyframes star-twinkle {
-  to {
-    opacity: 0.35;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .time-greeting--morning > .anticon,
-  .morning-bird,
   .morning-cloud,
   .greeting-scene {
     animation: none;
