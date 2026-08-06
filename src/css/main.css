@@ -108,6 +108,7 @@ body {
 #hero,
 #about,
 #portfolio,
+#github-contributions,
 #contact {
   scroll-margin-top: 5.5rem;
 }
@@ -542,6 +543,60 @@ header #header .nav-link:focus-visible {
 #portfolio .project .details .technology img {
   width: 2rem;
   display: block;
+}
+
+#github-contributions {
+  padding-top: clamp(3.5rem, 6vw, 6rem);
+  padding-bottom: clamp(4.5rem, 8vw, 7rem);
+}
+#github-contributions h1 {
+  margin-bottom: 2.5rem;
+  font-family: "Finger Paint", cursive;
+  font-size: 2.5rem;
+}
+#github-contributions .github-card-grid > * {
+  display: flex;
+}
+#github-contributions .github-card {
+  display: flex;
+  width: 100%;
+  min-height: 235px;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  box-shadow: 0 0 0 2px rgba(5, 100, 189, 0.6), 0 4px 12px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#github-contributions .github-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 0 2px rgba(5, 100, 189, 0.8), 0 10px 26px rgba(0, 0, 0, 0.16), 0 0 20px rgba(5, 100, 189, 0.2);
+}
+#github-contributions .github-card-image {
+  display: block;
+  width: min(100%, 495px);
+  height: 195px;
+  object-fit: contain;
+}
+
+@media (max-width: 575.98px) {
+  #github-contributions {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+  #github-contributions h1 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  #github-contributions .github-card {
+    min-height: 210px;
+    padding: 12px;
+  }
+  #github-contributions .github-card-image {
+    height: 185px;
+  }
 }
 
 @media screen and (min-width: 992px) {
