@@ -3,19 +3,15 @@
   "short_name": "CodeByAbhi",
   "icons": [
     {
-      "src": "/favicon.svg?v=2",
-      "sizes": "48x48",
-      "type": "image/svg+xml"
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     },
     {
       "src": "/img/img1.png",
       "sizes": "250x250",
       "type": "image/png"
-    },
-    {
-      "src": "/img/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
     }
   ],
   "theme_color": "#0564bd",

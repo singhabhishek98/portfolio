@@ -12,6 +12,7 @@ import {
   SunOutlined,
   UserOutlined,
 } from '@ant-design/icons';
+import birdGif from '../gif/bird.gif';
 
 const navigationItems = [
   { href: '#hero', label: 'Home', icon: <HomeOutlined /> },
@@ -51,14 +52,12 @@ function TimeGreeting() {
       {greeting.tone === 'morning' && (
         <span className="morning-sky" aria-hidden="true">
           <span className="morning-cloud">☁</span>
-          <span className="morning-bird">🕊</span>
-          <span className="morning-bird">🕊</span>
+          <img className="morning-bird-gif" src={birdGif} alt="" />
         </span>
       )}
       {greeting.tone === 'noon' && <span className="greeting-scene noon-scene" aria-hidden="true">✦ ☀ ✦</span>}
       {greeting.tone === 'afternoon' && <span className="greeting-scene afternoon-scene" aria-hidden="true">☀　☁</span>}
       {greeting.tone === 'evening' && <span className="greeting-scene evening-scene" aria-hidden="true">☁　◉</span>}
-      {greeting.tone === 'night' && <span className="greeting-scene night-scene" aria-hidden="true">✦　·　✦</span>}
       {greeting.icon}
       <span>{greeting.text}</span>
     </span>
