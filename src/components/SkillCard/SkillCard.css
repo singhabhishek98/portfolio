@@ -1,0 +1,7 @@
+.skill-icon--indented {
+  margin-left: 10px;
+}
+
+.skill-icon--indented + span {
+  margin-left: 15px !important;
+}
