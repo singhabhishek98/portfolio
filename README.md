@@ -1,52 +1,72 @@
-<div align="center">
-  <h3>📌 Portfolio</h3>
-    <p>Welcome to my personal portfolio! This project showcases my skills, projects, and experience in web development.</p>
-</div>
+# CodeByAbhi Portfolio
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/singhabhishek98/portfolio/main/UI.png" width="100%" />
-</div>
+A responsive React portfolio for Abhishek Singh, featuring projects, technical skills, GitHub activity, contact details, theme switching and a time-based header greeting.
 
+## Live site
 
-## 🚀 Live Demo
-Check out the live version of my portfolio:  
-[Portfolio Link](https://codebyabhi.netlify.app/)
+[codebyabhi.netlify.app](https://codebyabhi.netlify.app/)
 
-## 🛠️ Tech Stack
-- **Frontend:** React.js, HTML, CSS, JavaScript, SCSS  
-- **Version Control:** Git & GitHub  
-- **Deployment:** Vercel / Netlify / GitHub Pages  
+## Tech stack
 
-## 💂️ Project Structure
+- React 19 and Vite
+- Bootstrap and Bootstrap Icons
+- Ant Design
+- AOS, Typed.js and Curtains.js
+- EmailJS
 
-<pre>
-Port/
-├── node_modules/
-├── src/
+## Project structure
+
+```text
+src/
+├── assets/
 │   ├── fonts/
-│   ├── img/
-│   ├── js/
-│   ├── base/
-│   ├── components/
-│   └── README.md
-├── .gitignore
-├── .postcssrc
-├── package-lock.json
-├── package.json
-├── vite.config.js
+│   ├── gifs/
+│   ├── icons/
+│   └── images/
+├── components/
+│   ├── ContactForm/
+│   ├── Footer/
+│   ├── Header/
+│   ├── ProjectCard/
+│   ├── ScrollToTop/
+│   ├── SkillCard/
+│   ├── ThemeToggle/
+│   └── WhatsAppButton/
+├── data/
+│   ├── githubCards.js
+│   ├── navigation.js
+│   ├── projects.js
+│   ├── skills.js
+│   └── socialLinks.js
+├── pages/
+│   └── Home/
+├── sections/
+│   ├── About/
+│   ├── Contact/
+│   ├── GitHubContributions/
+│   ├── Hero/
+│   ├── Projects/
+│   └── Skills/
+├── styles/
+│   ├── framework.css
+│   └── globals.css
+├── App.jsx
 ├── index.html
-└── main.scss
-</pre>
+└── main.jsx
+```
 
-## 📸 Features
-- 🏠 **Home Page:** A brief introduction and welcome message  
-- 👨‍💻 **About Me:** My skills, education, and experience  
-- 🛠 **Projects:** Showcases of my previous work with live links and GitHub repositories  
-- 💎 **Fully Responsive:** Optimized for all screen sizes  
-- 📢 **Contact:** Contact form and social media links  
-- ✨ **SCSS Styling:** Better styling and modular CSS  
+Static PWA and crawler files such as the favicon, manifest assets, `robots.txt` and `sitemap.xml` live in `public/`.
 
-## 📌 Installation & Usage
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/singhabhishek98/Portfolio.git
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+## Production build
+
+```bash
+npm run build
+npm run serve
+```
